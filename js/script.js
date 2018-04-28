@@ -14,7 +14,6 @@ document.getElementById("calculate-button").onclick = function() {
 
 	var resultElement = document.getElementById('result');
 	resultElement.innerHTML = operationResult;	
-
 }
 
 /**
@@ -35,16 +34,5 @@ function getResult(val1, val2, operation) {
 	} 
 }
 
-
-
 } 
 
-
-
-/*function Sorry() {
-	var nan = 0 / 0;
-	var eNaN = Number.isNaN(nan);
-	var numero = parseInt();
-	if (Number.isNaN(numero))
-		numero = 0;
-*/
