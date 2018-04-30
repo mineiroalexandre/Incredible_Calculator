@@ -1,6 +1,5 @@
 window.onload = function() {
-
-
+	
 document.getElementById("calculate-button").onclick = function() {
 	
 	// Input elements with typed numbers.
