@@ -1,6 +1,8 @@
 window.onload = function() {
 
+
 document.getElementById("calculate-button").onclick = function() {
+	
 	// Input elements with typed numbers.
 	var val1 = parseInt(document.getElementById('elem-1').value);
 	var val2 = parseInt(document.getElementById('elem-2').value);
@@ -13,7 +15,15 @@ document.getElementById("calculate-button").onclick = function() {
 	var operationResult = getResult(val1, val2, operation);
 
 	var resultElement = document.getElementById('result');
-	resultElement.innerHTML = operationResult;	
+	resultElement.innerHTML = operationResult;
+
+	//Return pop up if the val1 and val2 variables are NaN.
+	if (isNaN(val1)) {
+	 alert("Operacao errada amigo(a);\nDigite um valor na caixa 1 para obter resultado.");
+	} else if (isNaN(val2)) {
+		alert("Operacao errada amigo(a);\nDigite um valor na caixa 2 para obter resultado.");
+	} 
+	
 }
 
 /**
@@ -31,7 +41,8 @@ function getResult(val1, val2, operation) {
 		return val1 * val2;
 	} else if (operation === '/') {
 		return val1 / val2;
-	} 
+	}
+
 }
 
 } 
